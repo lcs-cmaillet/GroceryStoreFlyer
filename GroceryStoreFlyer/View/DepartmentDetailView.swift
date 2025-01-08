@@ -11,14 +11,19 @@ struct DepartmentDetailView: View {
     
     //MARK: Stored property
     
-        let departmentToShow: Department
-        
-        //MARK: Computed property
+    let departmentToShow: Department
+    
+    //MARK: Computed property
     var body: some View {
-        Text(departmentToShow.name)
+        List(departmentToShow.items) { currentFoodIteam in
+            Text(currentFoodIteam.name)
+.listStyle(.plain)
+                .navigationTitle(departmentToShow.name)
+        }
     }
 }
-
-#Preview {
-    DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
-}
+    #Preview {
+        NavigationStack {
+            DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[1])
+        }
+    }

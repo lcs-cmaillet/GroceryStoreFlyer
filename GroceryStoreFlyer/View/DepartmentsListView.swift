@@ -11,7 +11,7 @@ struct DepartmentsListView: View {
     var body: some View {
         NavigationStack {
             
-            List {
+            List(thisWeeksFlyer.departments) { currentDepartment in
                 Text("One")
                 Text("Two")
                 Text("Three")

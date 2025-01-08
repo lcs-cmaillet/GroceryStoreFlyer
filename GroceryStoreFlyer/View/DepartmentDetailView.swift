@@ -7,16 +7,13 @@
 
 import SwiftUI
 
-struct DepartmentsListView: View {
+struct DepartmentDetailView: View {
     
     var body: some View {
-        
-        NavigationStack {
-            
-            List(thisWeeksFlyer.departments) { currentDepartment in
-                
-                NavigationLink { } { }
-            }
-        }
+        Text("Hello, World!")
     }
+}
+
+#Preview {
+    DepartmentDetailView()
 }

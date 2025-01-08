@@ -12,10 +12,7 @@ struct DepartmentsListView: View {
         NavigationStack {
             
             List(thisWeeksFlyer.departments) { currentDepartment in
-                Text("One")
-                Text("Two")
-                Text("Three")
-                
+                Text(currentDepartment.name)
             }
             .navigationTitle("Weekly Flyer")
         }

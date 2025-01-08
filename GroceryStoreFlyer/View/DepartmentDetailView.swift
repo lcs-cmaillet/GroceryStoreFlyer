@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DepartmentDetailView: View {
-    
     var body: some View {
         Text("Hello, World!")
     }

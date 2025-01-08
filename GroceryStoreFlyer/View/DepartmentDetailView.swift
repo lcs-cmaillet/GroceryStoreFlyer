@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct DepartmentDetailView: View {
+    
+    //MARK: Stored property
+    
+        let departmentToShow: Department
+        
+        //MARK: Computed property
     var body: some View {
-        Text("Hello, World!")
+        Text(departmentToShow.name)
     }
 }
 
 #Preview {
-    DepartmentDetailView()
+    DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
 }

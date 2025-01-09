@@ -16,14 +16,21 @@ struct DepartmentDetailView: View {
     //MARK: Computed property
     var body: some View {
         List(departmentToShow.items) { currentFoodIteam in
-            Text(currentFoodIteam.name)
-.listStyle(.plain)
-                .navigationTitle(departmentToShow.name)
+            
+            
+            VStack(alignment: .leading) {
+                
+                Text(currentFoodIteam.name)
+                    .listStyle(.plain)
+                    .navigationTitle(departmentToShow.name)
+                Image (currentFoodIteam.image)
+            }
+            
         }
     }
 }
-    #Preview {
-        NavigationStack {
-            DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[1])
-        }
+#Preview {
+    NavigationStack {
+        DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[1])
     }
+}

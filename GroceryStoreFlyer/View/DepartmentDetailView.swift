@@ -24,7 +24,7 @@ struct DepartmentDetailView: View {
                     .listStyle(.plain)
                     .navigationTitle(departmentToShow.name)
                 Image (currentFoodIteam.image)
-                Text(currentFoodIteam.price.formatted())
+                Text(currentFoodIteam.price.formatted(.currency(code: "CAD")))
                 
             }
             
@@ -33,6 +33,6 @@ struct DepartmentDetailView: View {
 }
 #Preview {
     NavigationStack {
-        DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[1])
+        DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
     }
 }

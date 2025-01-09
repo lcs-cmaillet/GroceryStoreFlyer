@@ -24,6 +24,8 @@ struct DepartmentDetailView: View {
                     .listStyle(.plain)
                     .navigationTitle(departmentToShow.name)
                 Image (currentFoodIteam.image)
+                Text(currentFoodIteam.price.formatted())
+                
             }
             
         }
